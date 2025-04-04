@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisneySea Navigator+</title> <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ディズニーシー効率化ナビ+</h1>
+
+    <div class="controls">
+        <label for="sort-select">ソート:</label>
+        <select id="sort-select">
+            <option value="priority">優先度順</option>
+            <option value="wait-time">待ち時間順</option>
+            <option value="name">名前順</option>
+            <option value="score">おすすめ度順</option> </select>
+        <label for="filter-area">エリア:</label>
+        <select id="filter-area">
+            <option value="">全エリア</option>
+            </select>
+         <label><input type="checkbox" id="hide-done"> 体験済みを隠す</label>
+         <button id="refresh-button">更新/再計算</button> </div>
+
+    <div id="recommendations">
+        <h2>次のおすすめ Top 3</h2>
+        <ol id="recommendation-list"></ol>
+        <p>現在地: <span id="current-location-name">未設定</span></p>
+        <p>(スコア = 優先度重視度 * 優先度スコア + 待ち時間重視度 * 待ち時間スコア + 距離重視度 * 距離スコア)</p>
+        <div class="weights">
+             <label>優先度重視:<input type="range" id="weight-priority" min="0" max="1" step="0.1" value="0.5"></label>
+             <label>待ち時間重視:<input type="range" id="weight-wait" min="0" max="1" step="0.1" value="0.3"></label>
+             <label>距離重視:<input type="range" id="weight-distance" min="0" max="1" step="0.1" value="0.2"></label>
+             <span id="weight-sum-warning" style="color: red; display: none;">合計が1になるように調整してください</span>
+        </div>
+    </div>
+
+    <hr> <h2>アトラクション一覧</h2>
+    <div id="attractions-list">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
