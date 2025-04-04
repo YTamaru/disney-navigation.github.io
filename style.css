@@ -1,0 +1,37 @@
+/* ... (前回のスタイル) ... */
+
+#recommendations {
+    background-color: #e0f7fa;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #00acc1;
+    border-radius: 5px;
+}
+#recommendations h2 {
+    margin-top: 0;
+    color: #007c91;
+}
+#recommendation-list li {
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #b2ebf2;
+}
+#recommendation-list li:last-child {
+    border-bottom: none;
+}
+#current-location-name { font-weight: bold; }
+
+.attraction .actions button { /* 「ここに行った」ボタン */
+    margin-top: 8px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.attraction .actions button:hover {
+    background-color: #45a049;
+}
+.weights label { display: block; margin-bottom: 5px;}
+.weights input[type="range"] { width: 150px; vertical-align: middle; margin-left: 5px;}
